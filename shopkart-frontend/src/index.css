@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", serif;
+  --font-body: "Manrope", sans-serif;
+
+  --color-ink: #151a2e;
+  --color-ink-soft: #232a45;
+  --color-paper: #fbf6ed;
+  --color-paper-dim: #f1ead9;
+  --color-charcoal: #1f2430;
+  --color-marigold: #e8a33d;
+  --color-marigold-dark: #c9862a;
+  --color-rust: #c0483a;
+  --color-sage: #6b7a63;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-paper);
+  color: var(--color-charcoal);
+}
+
+/* Visible keyboard focus everywhere, styled instead of removed */
+:focus-visible {
+  outline: 2px solid var(--color-marigold);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
